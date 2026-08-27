@@ -1,6 +1,6 @@
 const API_BASE = location.port === '8000' ? '' : 'http://127.0.0.1:8000';
 const state = {
-  entries: [], view: 'library', query: '', editingId: null, notingId: null, loading: true, loadError: null,
+  entries: [], view: 'library', query: '', dateFilter: 'all', editingId: null, notingId: null, loading: true, loadError: null,
   round: null, results: null, feedbackMode: 'end', selectedWordId: null, selectedDefinitionId: null
 };
 
@@ -27,6 +27,28 @@ function id() { return crypto.randomUUID?.() || `${Date.now()}-${Math.random().t
 function shuffle(items) { const result = [...items]; for (let i = result.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [result[i], result[j]] = [result[j], result[i]]; } return result; }
 function toast(message) { const node = $('#toast'); node.textContent = message; node.classList.add('show'); clearTimeout(toast.timer); toast.timer = setTimeout(() => node.classList.remove('show'), 2600); }
 function addedLabel(iso) { const date = new Date(iso); return isNaN(date) ? 'added' : `added ${date.toLocaleDateString(undefined, { month: 'short', day: 'numeric' }).toLowerCase()}`; }
+function dayKey(iso) {
+  const date = new Date(iso); if (isNaN(date)) return 'unknown';
+  return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
+}
+function dayLabel(key) {
+  if (key === 'unknown') return 'unknown date';
+  const today = new Date(); const yesterday = new Date(Date.now() - 86400000);
+  if (key === dayKey(today.toISOString())) return 'today';
+  if (key === dayKey(yesterday.toISOString())) return 'yesterday';
+  const date = new Date(`${key}T00:00:00`);
+  const opts = date.getFullYear() === today.getFullYear() ? { month: 'short', day: 'numeric' } : { year: 'numeric', month: 'short', day: 'numeric' };
+  return date.toLocaleDateString(undefined, opts).toLowerCase();
+}
+function renderDateFilter() {
+  const select = $('#dateFilter');
+  const counts = new Map();
+  state.entries.forEach(e => { const k = dayKey(e.createdAt); counts.set(k, (counts.get(k) || 0) + 1); });
+  if (state.dateFilter !== 'all' && !counts.has(state.dateFilter)) state.dateFilter = 'all';
+  const keys = [...counts.keys()].sort().reverse();
+  select.innerHTML = '<option value="all">all dates</option>' + keys.map(k => `<option value="${k}">${dayLabel(k)} (${counts.get(k)})</option>`).join('');
+  select.value = state.dateFilter;
+}
 
 function render() {
   const total = state.entries.length;
@@ -39,8 +61,11 @@ function render() {
 
 function renderList() {
   const list = $('#wordList'); const query = state.query.trim().toLowerCase();
-  const matches = state.entries.filter(e => !query || e.word.toLowerCase().includes(query) || e.definition.toLowerCase().includes(query));
-  $('#resultLabel').textContent = query ? `${matches.length} of ${state.entries.length}` : '';
+  renderDateFilter();
+  const matches = state.entries.filter(e =>
+    (state.dateFilter === 'all' || dayKey(e.createdAt) === state.dateFilter) &&
+    (!query || e.word.toLowerCase().includes(query) || e.definition.toLowerCase().includes(query)));
+  $('#resultLabel').textContent = query || state.dateFilter !== 'all' ? `${matches.length} of ${state.entries.length}` : '';
   if (state.loading) { list.innerHTML = '<div class="notice">loading…</div>'; return; }
   if (state.loadError) { list.innerHTML = `<div class="notice">could not load data/words.json — ${escapeHTML(state.loadError)} <a href="#retry" data-retry-load>try again</a></div>`; return; }
   if (!state.entries.length) { list.innerHTML = '<div class="notice">No words yet. Add your first one above.</div>'; return; }
@@ -246,6 +271,7 @@ $('#wordForm').addEventListener('submit', async event => {
   try { await saveEntries(); } catch (error) { state.entries = previous; render(); toast(error.message); }
 });
 $('#searchInput').addEventListener('input', event => { state.query = event.target.value; renderList(); });
+$('#dateFilter').addEventListener('change', event => { state.dateFilter = event.target.value; renderList(); });
 document.addEventListener('keydown', event => {
   const input = event.target instanceof Element ? event.target.closest('[data-note-input]') : null; if (!input) return;
   if (event.key === 'Enter' && (event.metaKey || event.ctrlKey)) { event.preventDefault(); saveNote(input.dataset.noteInput); }
