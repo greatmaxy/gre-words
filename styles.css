@@ -37,10 +37,12 @@ input:focus, textarea:focus { outline: 1px solid #ff6600; }
 .entry-line .definition { color: #444444; }
 .meta { display: flex; gap: 6px; color: #828282; font-size: 8pt; margin-top: 2px; }
 .meta a { color: #828282; }
-.note { color: #828282; font-size: 8pt; font-style: italic; margin-top: 2px; }
-.note-form { display: flex; gap: 6px; align-items: baseline; margin-top: 3px; font-size: 8pt; color: #828282; flex-wrap: wrap; }
-.note-form a { color: #828282; }
-.note-input { font-size: 9pt; padding: 1px 4px; border: 1px solid #b0b0a8; background: #ffffff; width: min(420px, 100%); }
+.note { color: #444444; font-size: 9pt; margin-top: 4px; white-space: pre-wrap; max-width: 640px; border-left: 2px solid #e0e0d8; padding-left: 8px; }
+.note-form { display: flex; flex-direction: column; gap: 4px; margin-top: 4px; }
+.note-actions { display: flex; gap: 6px; align-items: baseline; font-size: 8pt; color: #828282; flex-wrap: wrap; }
+.note-actions a { color: #828282; }
+.note-hint { margin-left: 6px; }
+.note-input { font-size: 9pt; padding: 3px 5px; border: 1px solid #b0b0a8; background: #ffffff; width: min(640px, 100%); resize: vertical; line-height: 1.45; }
 .notice { color: #828282; padding: 12px 0; }
 .notice a { color: #828282; text-decoration: underline; }
 

@@ -26,7 +26,7 @@ function validateEntries(value) {
     const note = typeof entry.note === 'string' ? entry.note.trim() : '';
     if (!id || !word || !definition) throw new Error(`Entry ${index + 1} needs an id, word, and definition.`);
     if (word.length > 80 || definition.length > 300) throw new Error(`Entry ${index + 1} exceeds the allowed length.`);
-    if (note.length > 500) throw new Error(`Entry ${index + 1} note exceeds 500 characters.`);
+    if (note.length > 2000) throw new Error(`Entry ${index + 1} note exceeds 2000 characters.`);
     if (seen.has(id)) throw new Error('Every entry needs a unique id.');
     seen.add(id);
     return note ? { id, word, definition, createdAt, note } : { id, word, definition, createdAt };

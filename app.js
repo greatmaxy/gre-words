@@ -47,7 +47,7 @@ function renderList() {
   if (!matches.length) { list.innerHTML = '<div class="notice">No words match.</div>'; return; }
   list.innerHTML = '<table class="word-table"><tbody>' + matches.map((e, index) => {
     const noteLine = state.notingId === e.id
-      ? `<div class="note-form"><input class="note-input" data-note-input="${e.id}" value="${escapeHTML(e.note || '')}" maxlength="500" placeholder="side note" /><a href="#save" data-note-save="${e.id}">save</a><span>|</span><a href="#cancel" data-note-cancel>cancel</a></div>`
+      ? `<div class="note-form"><textarea class="note-input" data-note-input="${e.id}" rows="6" maxlength="2000" placeholder="side note — etymology, mnemonics, example sentences…">${escapeHTML(e.note || '')}</textarea><div class="note-actions"><a href="#save" data-note-save="${e.id}">save</a><span>|</span><a href="#cancel" data-note-cancel>cancel</a><span class="note-hint">ctrl+enter to save, esc to cancel</span></div></div>`
       : e.note ? `<div class="note">${escapeHTML(e.note)}</div>` : '';
     return `<tr><td class="rank">${index + 1}.</td><td class="entry"><div class="entry-line"><strong>${escapeHTML(e.word)}</strong><span class="definition">${escapeHTML(e.definition)}</span></div>${noteLine}<div class="meta"><span>${addedLabel(e.createdAt)}</span><span>|</span><a href="#note" data-note="${e.id}">${e.note ? 'edit note' : 'add note'}</a><span>|</span><a href="#edit" data-edit="${e.id}">edit</a><span>|</span><a href="#delete" data-delete="${e.id}">delete</a></div></td></tr>`;
   }).join('') + '</tbody></table>';
@@ -248,7 +248,7 @@ $('#wordForm').addEventListener('submit', async event => {
 $('#searchInput').addEventListener('input', event => { state.query = event.target.value; renderList(); });
 document.addEventListener('keydown', event => {
   const input = event.target instanceof Element ? event.target.closest('[data-note-input]') : null; if (!input) return;
-  if (event.key === 'Enter') { event.preventDefault(); saveNote(input.dataset.noteInput); }
+  if (event.key === 'Enter' && (event.metaKey || event.ctrlKey)) { event.preventDefault(); saveNote(input.dataset.noteInput); }
   else if (event.key === 'Escape') { state.notingId = null; renderList(); }
 });
 $('#importFile').addEventListener('change', event => { const file = event.target.files[0]; event.target.value = ''; if (file) importWordsFile(file); });
