@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GRE Word Practice</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page">
+    <header class="topbar">
+      <span class="glyph">G</span>
+      <span class="title">GRE Word Practice</span>
+      <a href="#list" class="nav-link" data-view="library">my word list</a>
+      <span>|</span>
+      <a href="#practice" class="nav-link" data-view="practice">practice match</a>
+      <span id="wordCount" class="count"></span>
+    </header>
+
+    <section id="library" class="view">
+      <form id="wordForm" class="word-form">
+        <input id="wordInput" placeholder="word" maxlength="80" autocomplete="off" />
+        <input id="definitionInput" placeholder="definition" maxlength="300" autocomplete="off" />
+        <button type="submit" id="submitButton">add word</button>
+        <a href="#cancel" id="cancelEdit" class="cancel-link is-hidden">cancel</a>
+      </form>
+      <div class="search-row">
+        <input id="searchInput" placeholder="search" autocomplete="off" />
+        <span id="resultLabel"></span>
+      </div>
+      <div id="wordList"></div>
+    </section>
+
+    <section id="practice" class="view">
+      <div id="practiceContent"></div>
+    </section>
+
+    <footer class="footer">
+      <span>saved in data/words.json</span>
+      <span>|</span>
+      <a href="#import" id="importWords">import excel/csv</a>
+      <span>|</span>
+      <a href="#export" id="exportJson">export json</a>
+    </footer>
+  </div>
+  <div id="toast" role="status"></div>
+  <input type="file" id="importFile" accept=".csv,.tsv,.txt,.xlsx,.xls" class="is-hidden" />
+  <script src="vendor/xlsx.full.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
