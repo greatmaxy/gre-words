@@ -47,7 +47,8 @@
       "id": "43119038-d09e-4337-ab06-5384548cde0f",
       "word": "a starkness",
       "definition": "harsh simplicity, lack of decoration",
-      "createdAt": "2026-08-26T22:44:07.142Z"
+      "createdAt": "2026-08-26T22:44:07.142Z",
+      "note": "Imagine a stark white room: empty, plain, nothing to soften it."
     },
     {
       "id": "d923303e-7bdf-4612-a973-89e6397037ed",
@@ -199,7 +200,8 @@
       "id": "8b9f983d-0fb9-44b1-a923-8c7f2ce25368",
       "word": "exonerated",
       "definition": "cleared from blame",
-      "createdAt": "2026-08-26T22:44:07.142Z"
+      "createdAt": "2026-08-26T22:44:07.142Z",
+      "note": "https://youtube.com/shorts/7dfjEAMjoyY?si=W5UzLGW2WV2k9K6X\n\nThe new evidence exonerated the suspect.\nThe new evidence showed that the suspect was not responsible.\nexculpate ≈ exonerate ≈ acquit ≈ absolve ≈ vindicate = clear from blame"
     },
     {
       "id": "a9eca832-5ac1-407a-b6c6-f4c0281bb6b7",
@@ -314,13 +316,15 @@
       "id": "8e3e4395-2c38-4034-af47-25382423c99a",
       "word": "empirical",
       "definition": "based on observation/experiments",
-      "createdAt": "2026-08-26T22:44:07.142Z"
+      "createdAt": "2026-08-26T22:44:07.142Z",
+      "note": "Theoretical: “I think this medicine will work because of this theory.”\nEmpirical: “We tested it on 500 patients, and the data shows that it works.”"
     },
     {
       "id": "6863b559-2165-469d-ad62-1abdf5d9ae1e",
       "word": "esoteric",
       "definition": "understood by only a small group of specialists",
-      "createdAt": "2026-08-26T22:44:07.142Z"
+      "createdAt": "2026-08-26T22:44:07.142Z",
+      "note": "A highly specialized theory known only to a handful of physicists is esoteric."
     },
     {
       "id": "4a1405d7-90d7-430a-9733-4aa7e6404e49",
