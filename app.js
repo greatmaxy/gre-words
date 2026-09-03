@@ -1,6 +1,6 @@
 const API_BASE = location.port === '8000' ? '' : 'http://127.0.0.1:8000';
 const state = {
-  entries: [], view: 'library', query: '', dateFilter: 'all', editingId: null, notingId: null, loading: true, loadError: null,
+  entries: [], view: 'library', query: '', dateFilter: 'all', groupFilter: 'all', editingId: null, notingId: null, loading: true, loadError: null,
   round: null, results: null, feedbackMode: 'end', selectedWordId: null, selectedDefinitionId: null
 };
 
@@ -40,6 +40,18 @@ function dayLabel(key) {
   const opts = date.getFullYear() === today.getFullYear() ? { month: 'short', day: 'numeric' } : { year: 'numeric', month: 'short', day: 'numeric' };
   return date.toLocaleDateString(undefined, opts).toLowerCase();
 }
+function renderGroupFilter() {
+  const select = $('#groupFilter');
+  const counts = new Map();
+  state.entries.forEach(e => { if (e.group) counts.set(e.group, (counts.get(e.group) || 0) + 1); });
+  if (state.groupFilter !== 'all' && state.groupFilter !== 'none' && !counts.has(Number(state.groupFilter))) state.groupFilter = 'all';
+  const groups = [...counts.keys()].sort((a, b) => a - b);
+  const untagged = state.entries.filter(e => !e.group).length;
+  select.innerHTML = '<option value="all">all groups</option>'
+    + groups.map(g => `<option value="${g}">group ${g} (${counts.get(g)})</option>`).join('')
+    + (untagged && groups.length ? `<option value="none">no group (${untagged})</option>` : '');
+  select.value = state.groupFilter;
+}
 function renderDateFilter() {
   const select = $('#dateFilter');
   const counts = new Map();
@@ -61,11 +73,12 @@ function render() {
 
 function renderList() {
   const list = $('#wordList'); const query = state.query.trim().toLowerCase();
-  renderDateFilter();
+  renderDateFilter(); renderGroupFilter();
   const matches = state.entries.filter(e =>
     (state.dateFilter === 'all' || dayKey(e.createdAt) === state.dateFilter) &&
+    (state.groupFilter === 'all' || (state.groupFilter === 'none' ? !e.group : e.group === Number(state.groupFilter))) &&
     (!query || e.word.toLowerCase().includes(query) || e.definition.toLowerCase().includes(query)));
-  $('#resultLabel').textContent = query || state.dateFilter !== 'all' ? `${matches.length} of ${state.entries.length}` : '';
+  $('#resultLabel').textContent = query || state.dateFilter !== 'all' || state.groupFilter !== 'all' ? `${matches.length} of ${state.entries.length}` : '';
   if (state.loading) { list.innerHTML = '<div class="notice">loading…</div>'; return; }
   if (state.loadError) { list.innerHTML = `<div class="notice">could not load data/words.json — ${escapeHTML(state.loadError)} <a href="#retry" data-retry-load>try again</a></div>`; return; }
   if (!state.entries.length) { list.innerHTML = '<div class="notice">No words yet. Add your first one above.</div>'; return; }
@@ -74,7 +87,8 @@ function renderList() {
     const noteLine = state.notingId === e.id
       ? `<div class="note-form"><textarea class="note-input" data-note-input="${e.id}" rows="6" maxlength="2000" placeholder="side note — etymology, mnemonics, example sentences…">${escapeHTML(e.note || '')}</textarea><div class="note-actions"><a href="#save" data-note-save="${e.id}">save</a><span>|</span><a href="#cancel" data-note-cancel>cancel</a><span class="note-hint">ctrl+enter to save, esc to cancel</span></div></div>`
       : e.note ? `<div class="note">${escapeHTML(e.note)}</div>` : '';
-    return `<tr><td class="rank">${index + 1}.</td><td class="entry"><div class="entry-line"><strong>${escapeHTML(e.word)}</strong><span class="definition">${escapeHTML(e.definition)}</span></div>${noteLine}<div class="meta"><span>${addedLabel(e.createdAt)}</span><span>|</span><a href="#note" data-note="${e.id}">${e.note ? 'edit note' : 'add note'}</a><span>|</span><a href="#edit" data-edit="${e.id}">edit</a><span>|</span><a href="#delete" data-delete="${e.id}">delete</a></div></td></tr>`;
+    const groupTag = e.group ? `<span>|</span><span class="group-tag">group ${e.group}</span>` : '';
+    return `<tr><td class="rank">${index + 1}.</td><td class="entry"><div class="entry-line"><strong>${escapeHTML(e.word)}</strong><span class="definition">${escapeHTML(e.definition)}</span></div>${noteLine}<div class="meta"><span>${addedLabel(e.createdAt)}</span>${groupTag}<span>|</span><a href="#note" data-note="${e.id}">${e.note ? 'edit note' : 'add note'}</a><span>|</span><a href="#edit" data-edit="${e.id}">edit</a><span>|</span><a href="#delete" data-delete="${e.id}">delete</a></div></td></tr>`;
   }).join('') + '</tbody></table>';
 }
 
@@ -145,7 +159,9 @@ function chooseDefinition(defId) {
   pairIfReady(); renderPractice();
 }
 
-function resetForm() { state.editingId = null; $('#wordForm').reset(); $('#submitButton').textContent = 'add word'; $('#cancelEdit').classList.add('is-hidden'); }
+$('#groupSelect').innerHTML = '<option value="0">no group</option>' + Array.from({ length: 32 }, (_, i) => `<option value="${i + 1}">group ${i + 1}</option>`).join('');
+
+function resetForm() { state.editingId = null; $('#wordForm').reset(); $('#groupSelect').value = '0'; $('#submitButton').textContent = 'add word'; $('#cancelEdit').classList.add('is-hidden'); }
 
 async function saveNote(entryId) {
   const input = document.querySelector(`[data-note-input="${entryId}"]`); if (!input) return;
@@ -217,7 +233,7 @@ document.addEventListener('click', event => {
   if (control.dataset.edit) {
     event.preventDefault();
     const entry = state.entries.find(x => x.id === control.dataset.edit); if (!entry) return;
-    state.editingId = entry.id; $('#wordInput').value = entry.word; $('#definitionInput').value = entry.definition;
+    state.editingId = entry.id; $('#wordInput').value = entry.word; $('#definitionInput').value = entry.definition; $('#groupSelect').value = String(entry.group || 0);
     $('#submitButton').textContent = 'update'; $('#cancelEdit').classList.remove('is-hidden'); $('#wordInput').focus();
     return;
   }
@@ -260,18 +276,20 @@ document.addEventListener('submit', event => {
 $('#wordForm').addEventListener('submit', async event => {
   event.preventDefault();
   const word = $('#wordInput').value.trim(); const definition = $('#definitionInput').value.trim();
+  const group = Number($('#groupSelect').value) || 0;
   if (!word || !definition) return;
   const previous = state.entries;
   if (state.editingId) {
-    state.entries = state.entries.map(e => e.id === state.editingId ? { ...e, word, definition } : e);
+    state.entries = state.entries.map(e => e.id === state.editingId ? { ...e, word, definition, group } : e);
   } else {
-    state.entries = [{ id: id(), word, definition, createdAt: new Date().toISOString() }, ...state.entries];
+    state.entries = [{ id: id(), word, definition, group, createdAt: new Date().toISOString() }, ...state.entries];
   }
   resetForm(); clearRound(); render();
   try { await saveEntries(); } catch (error) { state.entries = previous; render(); toast(error.message); }
 });
 $('#searchInput').addEventListener('input', event => { state.query = event.target.value; renderList(); });
 $('#dateFilter').addEventListener('change', event => { state.dateFilter = event.target.value; renderList(); });
+$('#groupFilter').addEventListener('change', event => { state.groupFilter = event.target.value; renderList(); });
 document.addEventListener('keydown', event => {
   const input = event.target instanceof Element ? event.target.closest('[data-note-input]') : null; if (!input) return;
   if (event.key === 'Enter' && (event.metaKey || event.ctrlKey)) { event.preventDefault(); saveNote(input.dataset.noteInput); }

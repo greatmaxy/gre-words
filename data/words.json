@@ -1,6 +1,94 @@
 {
   "entries": [
     {
+      "id": "61cdbdb6-15fd-4daf-8f35-9534d28771af",
+      "word": "diffident",
+      "definition": "reserved or shy; without confidence",
+      "createdAt": "2026-09-03T21:51:03.811Z"
+    },
+    {
+      "id": "31e3c9a4-de0b-4eb0-9735-4ae6c47b80f7",
+      "word": "spendthrift",
+      "definition": "someone who spends money recklessly",
+      "createdAt": "2026-09-03T21:50:31.348Z"
+    },
+    {
+      "id": "d3f732c3-404c-4572-ace8-3c0ea3380ef7",
+      "word": "spartan",
+      "definition": "marked by simplicity, frugality, and avoidance of luxury",
+      "createdAt": "2026-09-03T21:50:10.399Z"
+    },
+    {
+      "id": "e419da5f-3db4-440c-920e-127d750e8527",
+      "word": "parsimonious",
+      "definition": "extremely frugal or stingy",
+      "createdAt": "2026-09-03T21:49:52.957Z"
+    },
+    {
+      "id": "7334c3bf-cd07-4237-a6f4-e44cebf1b022",
+      "word": "economy",
+      "definition": "frugal or effective use of resources or words",
+      "createdAt": "2026-09-03T21:49:23.724Z"
+    },
+    {
+      "id": "b1770320-40ae-4dd6-b366-6ed12318f61c",
+      "word": "indifferent",
+      "definition": "caring about somebody/something",
+      "createdAt": "2026-09-03T21:40:49.215Z"
+    },
+    {
+      "id": "8276311e-dc6d-4503-b7a5-ba2366fdeaa8",
+      "word": "coarseness",
+      "definition": "Rudeness, vulgarity, crudeness",
+      "createdAt": "2026-09-03T21:06:04.999Z"
+    },
+    {
+      "id": "13d57beb-4630-463f-932b-e74c2f5164ab",
+      "word": "novelty",
+      "definition": "the quality of being new and different",
+      "createdAt": "2026-09-03T21:05:22.016Z"
+    },
+    {
+      "id": "81a486a8-aaa5-4571-a2c4-2d756ac07ec4",
+      "word": "urbane",
+      "definition": "refined, sophisticated, and courteous",
+      "createdAt": "2026-09-03T21:04:06.910Z"
+    },
+    {
+      "id": "7e0c70d5-a5e6-40df-92cf-33890fa36bca",
+      "word": "eccentric",
+      "definition": "deviating from conventional behavior; quirky",
+      "createdAt": "2026-09-03T21:03:44.229Z"
+    },
+    {
+      "id": "cdd03d0b-0c4c-4521-8603-9e7348747e34",
+      "word": "salient",
+      "definition": "most noticeable, important, or relevant part of something.",
+      "createdAt": "2026-09-02T21:46:27.764Z",
+      "note": "The most salient feature of the proposal is its low cost."
+    },
+    {
+      "id": "2a714566-3ac8-4c47-b3b7-1ce18c3e73b4",
+      "word": "Pertinent",
+      "definition": "directly relevant or important to the subject being discussed.",
+      "createdAt": "2026-09-02T21:39:42.779Z",
+      "note": "GRE synonyms\n\nrelevant, germane, apposite, apropos, applicable"
+    },
+    {
+      "id": "a556db2a-74b5-412e-967c-577c51044ac7",
+      "word": "apposite",
+      "definition": "exactly fitting / highly relevant",
+      "createdAt": "2026-09-02T21:39:08.212Z",
+      "note": "The professor made an apposite observation about the student’s argument.\n\nOpposite this is Apposite"
+    },
+    {
+      "id": "c8e059c2-6a1e-4eaa-ae12-714999ac008f",
+      "word": "Apropos",
+      "definition": "relevant or appropriate to the situation/topic.",
+      "createdAt": "2026-09-02T21:37:37.025Z",
+      "note": "APPROpos → APPROpriate."
+    },
+    {
       "id": "72198e62-a10b-4a93-b554-7e517baa2048",
       "word": "decry",
       "definition": "condemn publicly",
@@ -97,7 +185,8 @@
       "id": "57d9a70e-f73f-471f-b66b-8c3a343d978b",
       "word": "germane",
       "definition": "relevant or related to the subject",
-      "createdAt": "2026-08-26T22:44:07.142Z"
+      "createdAt": "2026-08-26T22:44:07.142Z",
+      "note": "The professor asked the student to make only comments germane to the discussion.\n\nGRE synonyms\nrelevant, pertinent, applicable, apropos\nOpposites\nirrelevant, extraneous, immaterial"
     },
     {
       "id": "b82a6849-ee17-428a-b358-c4aa32006368",
@@ -132,7 +221,7 @@
     },
     {
       "id": "201b9213-4ced-4814-87ce-f65751df4394",
-      "word": "apathetic",
+      "word": "apathy",
       "definition": "uninterested, emotionally indifferent",
       "createdAt": "2026-08-26T22:44:07.142Z"
     },
@@ -176,7 +265,8 @@
       "id": "96c68b70-e911-4548-bf3d-9ec8722de8fc",
       "word": "conspicuous",
       "definition": "easily noticed",
-      "createdAt": "2026-08-26T22:44:07.142Z"
+      "createdAt": "2026-08-26T22:44:07.142Z",
+      "note": "This means buying/displaying expensive things specifically to show off wealth or status.\n\nHis collection of luxury cars was an example of conspicuous consumption.\n\nnoticeable, prominent, striking, salient, obvious"
     },
     {
       "id": "3677ed1b-3673-4bff-9746-485047bfde97",
@@ -292,7 +382,7 @@
       "word": "inimical to",
       "definition": "harmful or hostile to",
       "createdAt": "2026-08-26T22:44:07.142Z",
-      "note": "https://www.youtube.com/shorts/Mk61Z5bxXiA"
+      "note": "https://www.youtube.com/shorts/Mk61Z5bxXiA\n\nExcessive bureaucracy harms or obstructs innovation.\n\nSuch policies are inimical to economic growth."
     },
     {
       "id": "56a99a13-d0f3-41d8-8cf4-572fc40220b5",
@@ -304,7 +394,8 @@
       "id": "4bfdf145-e177-4d42-a72d-8a862ebbf14e",
       "word": "polemical",
       "definition": "strongly argumentative or controversial",
-      "createdAt": "2026-08-26T22:44:07.142Z"
+      "createdAt": "2026-08-26T22:44:07.142Z",
+      "note": "The author wrote a polemical article attacking the government’s economic policies.\n\n→ The article wasn't calmly discussing the issue; it was forcefully arguing against the policies.\n\nA polemical person thrives on passionate, opinionated arguments, and being purposely proactive"
     },
     {
       "id": "e4ae2f1a-3add-4c88-8e51-3fb985099411",

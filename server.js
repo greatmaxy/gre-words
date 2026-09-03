@@ -24,12 +24,17 @@ function validateEntries(value) {
     const definition = typeof entry.definition === 'string' ? entry.definition.trim() : '';
     const createdAt = typeof entry.createdAt === 'string' ? entry.createdAt : new Date().toISOString();
     const note = typeof entry.note === 'string' ? entry.note.trim() : '';
+    const group = Number.isInteger(entry.group) ? entry.group : 0;
     if (!id || !word || !definition) throw new Error(`Entry ${index + 1} needs an id, word, and definition.`);
     if (word.length > 80 || definition.length > 300) throw new Error(`Entry ${index + 1} exceeds the allowed length.`);
     if (note.length > 2000) throw new Error(`Entry ${index + 1} note exceeds 2000 characters.`);
+    if (group && (group < 1 || group > 32)) throw new Error(`Entry ${index + 1} group must be between 1 and 32.`);
     if (seen.has(id)) throw new Error('Every entry needs a unique id.');
     seen.add(id);
-    return note ? { id, word, definition, createdAt, note } : { id, word, definition, createdAt };
+    const result = { id, word, definition, createdAt };
+    if (note) result.note = note;
+    if (group) result.group = group;
+    return result;
   });
 }
 

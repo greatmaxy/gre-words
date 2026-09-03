@@ -28,7 +28,9 @@ input:focus, textarea:focus { outline: 1px solid #ff6600; }
 
 .search-row { display: flex; align-items: baseline; gap: 8px; border-bottom: 1px solid #e0e0d8; padding-bottom: 6px; }
 #searchInput { font-size: 9pt; padding: 1px 4px; border: 1px solid #b0b0a8; background: #ffffff; width: 180px; }
-#dateFilter { font-size: 9pt; padding: 1px 4px; border: 1px solid #b0b0a8; background: #ffffff; }
+#dateFilter, #groupFilter { font-size: 9pt; padding: 1px 4px; border: 1px solid #b0b0a8; background: #ffffff; }
+#groupSelect { font-size: 10pt; padding: 2px 4px; border: 1px solid #b0b0a8; background: #ffffff; }
+.group-tag { color: #828282; }
 #resultLabel { color: #828282; font-size: 8pt; }
 
 .word-table { border-collapse: collapse; width: 100%; margin-top: 8px; }

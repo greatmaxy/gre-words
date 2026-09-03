@@ -22,12 +22,14 @@
       <form id="wordForm" class="word-form">
         <input id="wordInput" placeholder="word" maxlength="80" autocomplete="off" />
         <input id="definitionInput" placeholder="definition" maxlength="300" autocomplete="off" />
+        <select id="groupSelect"><option value="0">no group</option></select>
         <button type="submit" id="submitButton">add word</button>
         <a href="#cancel" id="cancelEdit" class="cancel-link is-hidden">cancel</a>
       </form>
       <div class="search-row">
         <input id="searchInput" placeholder="search" autocomplete="off" />
         <select id="dateFilter"><option value="all">all dates</option></select>
+        <select id="groupFilter"><option value="all">all groups</option></select>
         <span id="resultLabel"></span>
       </div>
       <div id="wordList"></div>
