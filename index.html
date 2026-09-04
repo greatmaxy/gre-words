@@ -25,7 +25,17 @@
         <select id="groupSelect"><option value="0">no group</option></select>
         <button type="submit" id="submitButton">add word</button>
         <a href="#cancel" id="cancelEdit" class="cancel-link is-hidden">cancel</a>
+        <a href="#bulk" id="bulkToggle" class="cancel-link">add many</a>
       </form>
+      <div id="bulkPanel" class="bulk-panel is-hidden">
+        <textarea id="bulkInput" rows="8" placeholder="one word per line, e.g.&#10;laconic - using very few words&#10;garrulous: excessively talkative&#10;or paste two columns straight from excel"></textarea>
+        <div class="note-actions">
+          <select id="bulkGroup"><option value="0">no group</option></select>
+          <button id="bulkAdd" type="button">add all</button>
+          <a href="#cancel" id="bulkCancel">cancel</a>
+          <span class="note-hint">word and definition separated by tab, " - ", or ":"</span>
+        </div>
+      </div>
       <div class="search-row">
         <input id="searchInput" placeholder="search" autocomplete="off" />
         <select id="dateFilter"><option value="all">all dates</option></select>

@@ -1,7 +1,7 @@
 const API_BASE = location.port === '8000' ? '' : 'http://127.0.0.1:8000';
 const state = {
   entries: [], view: 'library', query: '', dateFilter: 'all', groupFilter: 'all', editingId: null, notingId: null, loading: true, loadError: null,
-  round: null, results: null, feedbackMode: 'end', selectedWordId: null, selectedDefinitionId: null
+  round: null, results: null, feedbackMode: 'end', selectedWordId: null, selectedDefinitionId: null, practiceGroup: 'all'
 };
 
 const $ = (selector) => document.querySelector(selector);
@@ -92,11 +92,25 @@ function renderList() {
   }).join('') + '</tbody></table>';
 }
 
+function practicePool() {
+  if (state.practiceGroup === 'none') return state.entries.filter(e => !e.group);
+  if (state.practiceGroup !== 'all') return state.entries.filter(e => e.group === Number(state.practiceGroup));
+  return state.entries;
+}
 function practiceSetup() {
   if (state.entries.length < 2) return '<div class="quiz-notice">Add at least two words to practice matching.</div>';
-  const max = Math.min(state.entries.length, 20);
+  const counts = new Map();
+  state.entries.forEach(e => { if (e.group) counts.set(e.group, (counts.get(e.group) || 0) + 1); });
+  const groups = [...counts.keys()].filter(g => counts.get(g) >= 2).sort((a, b) => a - b);
+  const untagged = state.entries.filter(e => !e.group).length;
+  const validGroup = state.practiceGroup === 'all' || (state.practiceGroup === 'none' ? untagged >= 2 && groups.length > 0 : groups.includes(Number(state.practiceGroup)));
+  if (!validGroup) state.practiceGroup = 'all';
+  const poolOptions = `<option value="all">all words (${state.entries.length})</option>`
+    + groups.map(g => `<option value="${g}" ${String(g) === state.practiceGroup ? 'selected' : ''}>group ${g} (${counts.get(g)})</option>`).join('')
+    + (untagged >= 2 && groups.length ? `<option value="none" ${state.practiceGroup === 'none' ? 'selected' : ''}>no group (${untagged})</option>` : '');
+  const max = Math.min(practicePool().length, 20);
   const options = Array.from({ length: max - 1 }, (_, i) => i + 2).map(n => `<option value="${n}" ${n === Math.min(5, max) ? 'selected' : ''}>${n} words</option>`).join('');
-  return `<form id="setupForm" class="setup-row"><span class="setup-label">round size</span><select name="count">${options}</select><label><input type="radio" name="feedback" value="end" checked /> review at end</label><label><input type="radio" name="feedback" value="instant" /> reveal as i go</label><button type="submit">start matching</button></form>`;
+  return `<form id="setupForm" class="setup-row"><span class="setup-label">from</span><select name="pool">${poolOptions}</select><span class="setup-label">round size</span><select name="count">${options}</select><label><input type="radio" name="feedback" value="end" checked /> review at end</label><label><input type="radio" name="feedback" value="instant" /> reveal as i go</label><button type="submit">start matching</button></form>`;
 }
 
 function statusFor(wordId) {
@@ -135,7 +149,7 @@ function renderResults() {
 function renderPractice() { $('#practiceContent').innerHTML = state.results ? renderResults() : state.round ? renderRound() : practiceSetup(); }
 
 function startRound(count, feedback) {
-  const words = shuffle(state.entries).slice(0, count);
+  const words = shuffle(practicePool()).slice(0, count);
   state.round = { words, definitions: shuffle(words), pairs: {} };
   state.feedbackMode = feedback; state.results = null; state.selectedWordId = null; state.selectedDefinitionId = null;
   renderPractice();
@@ -159,7 +173,47 @@ function chooseDefinition(defId) {
   pairIfReady(); renderPractice();
 }
 
-$('#groupSelect').innerHTML = '<option value="0">no group</option>' + Array.from({ length: 32 }, (_, i) => `<option value="${i + 1}">group ${i + 1}</option>`).join('');
+const groupOptionsHTML = '<option value="0">no group</option>' + Array.from({ length: 32 }, (_, i) => `<option value="${i + 1}">group ${i + 1}</option>`).join('');
+$('#groupSelect').innerHTML = groupOptionsHTML;
+$('#bulkGroup').innerHTML = groupOptionsHTML;
+
+function splitBulkLine(line) {
+  const tab = line.indexOf('\t');
+  if (tab > 0) return [line.slice(0, tab), line.slice(tab + 1)];
+  let best = null;
+  for (const delimiter of [' - ', ':']) {
+    const i = line.indexOf(delimiter);
+    if (i > 0 && (!best || i < best.index)) best = { index: i, length: delimiter.length };
+  }
+  return best ? [line.slice(0, best.index), line.slice(best.index + best.length)] : null;
+}
+
+async function addBulkWords() {
+  const group = Number($('#bulkGroup').value) || 0;
+  const existing = new Set(state.entries.map(e => e.word.toLowerCase()));
+  const added = []; const failed = []; let skipped = 0;
+  $('#bulkInput').value.split('\n').forEach(line => {
+    if (!line.trim()) return;
+    const parts = splitBulkLine(line.trim());
+    const word = parts?.[0].trim() || ''; const definition = parts?.[1].trim() || '';
+    if (!word || !definition || word.length > 80 || definition.length > 300) { failed.push(line); return; }
+    if (existing.has(word.toLowerCase())) { skipped++; return; }
+    existing.add(word.toLowerCase());
+    const entry = { id: id(), word, definition, createdAt: new Date().toISOString() };
+    if (group) entry.group = group;
+    added.push(entry);
+  });
+  if (!added.length) { toast(skipped ? `Nothing added — ${skipped} already in your list${failed.length ? `, ${failed.length} unreadable` : ''}.` : failed.length ? 'No readable lines — use "word - definition", one per line.' : 'Nothing to add.'); return; }
+  const previous = state.entries;
+  state.entries = [...added, ...state.entries];
+  clearRound(); render();
+  try {
+    await saveEntries(); render();
+    toast(`Added ${added.length} word${added.length === 1 ? '' : 's'}${skipped ? `, ${skipped} already existed` : ''}${failed.length ? `, ${failed.length} line${failed.length === 1 ? '' : 's'} unreadable` : ''}.`);
+    $('#bulkInput').value = failed.join('\n');
+    if (!failed.length) { $('#bulkGroup').value = '0'; $('#bulkPanel').classList.add('is-hidden'); }
+  } catch (error) { state.entries = previous; render(); toast(error.message); }
+}
 
 function resetForm() { state.editingId = null; $('#wordForm').reset(); $('#groupSelect').value = '0'; $('#submitButton').textContent = 'add word'; $('#cancelEdit').classList.add('is-hidden'); }
 
@@ -256,6 +310,9 @@ document.addEventListener('click', event => {
   if (control.hasAttribute('data-end-round') || control.hasAttribute('data-back-setup')) { event.preventDefault(); clearRound(); renderPractice(); return; }
   if (control.hasAttribute('data-retry')) { event.preventDefault(); startRound(state.round.words.length, state.feedbackMode); return; }
   if (control.id === 'cancelEdit') { event.preventDefault(); resetForm(); return; }
+  if (control.id === 'bulkToggle') { event.preventDefault(); const panel = $('#bulkPanel'); panel.classList.toggle('is-hidden'); if (!panel.classList.contains('is-hidden')) $('#bulkInput').focus(); return; }
+  if (control.id === 'bulkCancel') { event.preventDefault(); $('#bulkPanel').classList.add('is-hidden'); return; }
+  if (control.id === 'bulkAdd') { addBulkWords(); return; }
   if (control.id === 'importWords') { event.preventDefault(); $('#importFile').click(); return; }
   if (control.id === 'exportJson') {
     event.preventDefault();
@@ -290,6 +347,9 @@ $('#wordForm').addEventListener('submit', async event => {
 $('#searchInput').addEventListener('input', event => { state.query = event.target.value; renderList(); });
 $('#dateFilter').addEventListener('change', event => { state.dateFilter = event.target.value; renderList(); });
 $('#groupFilter').addEventListener('change', event => { state.groupFilter = event.target.value; renderList(); });
+document.addEventListener('change', event => {
+  if (event.target instanceof Element && event.target.matches('#setupForm select[name="pool"]')) { state.practiceGroup = event.target.value; renderPractice(); }
+});
 document.addEventListener('keydown', event => {
   const input = event.target instanceof Element ? event.target.closest('[data-note-input]') : null; if (!input) return;
   if (event.key === 'Enter' && (event.metaKey || event.ctrlKey)) { event.preventDefault(); saveNote(input.dataset.noteInput); }

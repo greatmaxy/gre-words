@@ -1,6 +1,487 @@
 {
   "entries": [
     {
+      "id": "6711e4fc-a777-42b0-bcd8-8f7e8e25034a",
+      "word": "ingenuous",
+      "definition": "naive and lacking experience",
+      "createdAt": "2026-09-04T22:23:47.620Z",
+      "group": 2
+    },
+    {
+      "id": "74a282c2-7d18-4b49-a1eb-829abc6d46c2",
+      "word": "incredulous",
+      "definition": "doubtful and disbelieving",
+      "createdAt": "2026-09-04T22:23:38.525Z",
+      "group": 2
+    },
+    {
+      "id": "1bf56c7e-9c92-48e5-84e3-657371537484",
+      "word": "diatribe",
+      "definition": "an angry rant; verbal abuse",
+      "createdAt": "2026-09-04T22:23:27.995Z",
+      "group": 2
+    },
+    {
+      "id": "b3f3fac5-b58e-4592-b8cd-08603b109ee1",
+      "word": "desiccate",
+      "definition": "dry out; remove all moisture",
+      "createdAt": "2026-09-04T22:23:16.860Z",
+      "group": 2
+    },
+    {
+      "id": "5431ea79-006b-43d0-bd3a-0a0ab1e394b8",
+      "word": "derivative",
+      "definition": "based on someone else's work (often used in a negative sense)",
+      "createdAt": "2026-09-04T22:23:05.941Z",
+      "group": 2
+    },
+    {
+      "id": "3c0d3960-d4fd-4d0a-84bf-f2e84651dcc5",
+      "word": "demur",
+      "definition": "1. hesitate or object; express doubt 2. hesitation",
+      "createdAt": "2026-09-04T22:22:56.190Z",
+      "group": 2
+    },
+    {
+      "id": "88227b3a-38b9-45a5-a9b0-e41132af4e1b",
+      "word": "deft",
+      "definition": "highly proficient; skilled",
+      "createdAt": "2026-09-04T22:22:46.879Z",
+      "group": 2
+    },
+    {
+      "id": "f5b65665-8929-4fc6-a1f6-2e16aeaa8684",
+      "word": "decorum",
+      "definition": "politeness and proper behavior",
+      "createdAt": "2026-09-04T22:22:37.728Z",
+      "group": 2
+    },
+    {
+      "id": "380dc210-d542-481c-a7d5-ba0c68c85fb8",
+      "word": "craven",
+      "definition": "lacking bravery; weak-kneed",
+      "createdAt": "2026-09-04T22:22:21.374Z",
+      "group": 2
+    },
+    {
+      "id": "4198d1aa-f0da-4e43-b0ba-cd14aa9dc012",
+      "word": "convoluted",
+      "definition": "difficult to understand or follow.",
+      "createdAt": "2026-09-04T22:21:48.727Z",
+      "group": 2
+    },
+    {
+      "id": "d1eed5d9-3258-4fb0-becc-2d8d1ed03088",
+      "word": "contrite",
+      "definition": "feeling regretful or guilty",
+      "createdAt": "2026-09-04T22:21:38.024Z",
+      "group": 2
+    },
+    {
+      "id": "e11a9b15-cee4-4f4e-a5ac-cf448a30098b",
+      "word": "construe",
+      "definition": "understand something subjectively",
+      "createdAt": "2026-09-04T22:21:28.782Z",
+      "group": 2
+    },
+    {
+      "id": "dbacc0e0-3943-4ba9-ba7b-dc10b9f92671",
+      "word": "caustic",
+      "definition": "1. (of speech) hostile and bitter 2. (of a chemical) corrosive; acidic",
+      "createdAt": "2026-09-04T22:21:16.794Z",
+      "group": 2
+    },
+    {
+      "id": "5bd60050-d705-47a3-8d49-119133bfb97a",
+      "word": "castigate",
+      "definition": "scold someone harshly",
+      "createdAt": "2026-09-04T22:21:07.344Z",
+      "group": 2
+    },
+    {
+      "id": "3fd6ee95-7ff1-4386-9fd8-8d0bc1964c22",
+      "word": "candid",
+      "definition": "honest; without deception",
+      "createdAt": "2026-09-04T22:20:57.553Z",
+      "group": 2
+    },
+    {
+      "id": "d1abc996-4c07-4905-9f3f-2191892469cf",
+      "word": "calumny",
+      "definition": "slander and defamation",
+      "createdAt": "2026-09-04T22:20:48.432Z",
+      "group": 2
+    },
+    {
+      "id": "20873509-3728-45fa-ab97-1beb9eb8d101",
+      "word": "benign",
+      "definition": "1. harmless; having little effect 2. (of a person's character) kind hearted; nice",
+      "createdAt": "2026-09-04T22:20:11.864Z",
+      "group": 2
+    },
+    {
+      "id": "eb9e24bf-1dcd-467c-a94b-d1c18ec841e7",
+      "word": "banal",
+      "definition": "unoriginal and dull; lacking creativity",
+      "createdAt": "2026-09-04T22:20:00.727Z",
+      "group": 2
+    },
+    {
+      "id": "496dd97b-3a04-416f-8d99-d06476c279a1",
+      "word": "avaricious",
+      "definition": "greedy; always wanting more",
+      "createdAt": "2026-09-04T22:19:49.794Z",
+      "group": 2
+    },
+    {
+      "id": "9299560d-37fb-4cbd-ac93-cad175fe726e",
+      "word": "audacious",
+      "definition": "1. bold; unafraid of risks 2. rude; exhibiting disrespect",
+      "createdAt": "2026-09-04T22:19:39.897Z",
+      "group": 2
+    },
+    {
+      "id": "de72f4d8-1527-4150-bb9b-8cf7ca941720",
+      "word": "anachronistic",
+      "definition": "of the wrong time or era",
+      "createdAt": "2026-09-04T22:19:27.940Z",
+      "group": 2
+    },
+    {
+      "id": "0409c618-1ccc-4b27-a897-82b7a78e5492",
+      "word": "amenable",
+      "definition": "(of a person) receptive to change; open (of a thing) responsive to",
+      "createdAt": "2026-09-04T22:19:13.086Z",
+      "group": 2
+    },
+    {
+      "id": "d55a2a2f-294f-4091-9f44-7359648e6d8e",
+      "word": "ameliorate",
+      "definition": "improve a bad feeling or bad situation",
+      "createdAt": "2026-09-04T22:19:00.561Z",
+      "group": 2
+    },
+    {
+      "id": "cc8115b2-2a16-4c27-b663-c13431a44661",
+      "word": "ambivalent",
+      "definition": "having conflicting emotions; unsure",
+      "createdAt": "2026-09-04T22:18:45.977Z",
+      "group": 2
+    },
+    {
+      "id": "f90898dc-e396-441d-8f08-20487c0bed56",
+      "word": "alacrity",
+      "definition": "eagerness to do something",
+      "createdAt": "2026-09-04T22:18:34.714Z",
+      "group": 2
+    },
+    {
+      "id": "7f354e50-d9f8-4e76-bffd-88d2de63a7eb",
+      "word": "aggrandize",
+      "definition": "enhance one's power or standing",
+      "createdAt": "2026-09-04T22:18:24.034Z",
+      "group": 2
+    },
+    {
+      "id": "1a0c3594-f68f-4a47-bbd7-6e5de1aad3b4",
+      "word": "advocate",
+      "definition": "support; be in favor of",
+      "createdAt": "2026-09-04T22:18:06.926Z",
+      "group": 2
+    },
+    {
+      "id": "c0fe7edc-077e-47a7-be68-f6dedf47b45a",
+      "word": "adulterate",
+      "definition": "damage the quality of; corrupt",
+      "createdAt": "2026-09-04T22:17:53.803Z",
+      "group": 2
+    },
+    {
+      "id": "0beba9cb-e610-44f7-b5a7-9d4f4c7bde2d",
+      "word": "conscientious",
+      "definition": "careful to do something correctly and well,  (used about actions) done with great care and attention",
+      "createdAt": "2026-09-04T22:13:41.370Z"
+    },
+    {
+      "id": "46066d02-6963-4de5-8055-d729b767ca33",
+      "word": "sporadic",
+      "definition": "happening occasionally and irregularly",
+      "createdAt": "2026-09-04T22:12:14.096Z",
+      "group": 5
+    },
+    {
+      "id": "6d75c7cb-6ebe-4e65-8095-27c84958c95a",
+      "word": "abstract",
+      "definition": "present in thought or concept but lacking physical existence, removing something or considering something separate",
+      "createdAt": "2026-09-04T20:29:21.798Z",
+      "group": 28
+    },
+    {
+      "id": "44f8b636-1ecb-41df-bceb-9e1e84fcfd93",
+      "word": "elated",
+      "definition": "very happy or proud",
+      "createdAt": "2026-09-04T20:26:50.566Z",
+      "group": 15
+    },
+    {
+      "id": "0585d3f9-61ae-43e1-a323-c54da1b24353",
+      "word": "obdurate",
+      "definition": "stubborn; unyielding",
+      "createdAt": "2026-09-04T20:06:58.012Z",
+      "group": 30
+    },
+    {
+      "id": "a6e966ca-9bb6-4134-98d5-17f38bf231c8",
+      "word": "specious",
+      "definition": "seemingly reasonable but actually wrong",
+      "createdAt": "2026-09-04T20:06:10.267Z",
+      "group": 6
+    },
+    {
+      "id": "3ce781a5-5570-48ed-a506-4e358747b937",
+      "word": "altruistic",
+      "definition": "showing generosity and concern for the welfare of others",
+      "createdAt": "2026-09-04T19:57:14.416Z",
+      "group": 13
+    },
+    {
+      "id": "5bad3d6c-d769-4395-948c-bd60ac8bd80b",
+      "word": "unseemly",
+      "definition": "not proper or in good taste",
+      "createdAt": "2026-09-04T19:09:11.295Z",
+      "group": 18
+    },
+    {
+      "id": "733ac3f2-36ee-4901-959e-f5caadc48f38",
+      "word": "fortuitous",
+      "definition": "happening by chance, especially a lucky chance",
+      "createdAt": "2026-09-04T19:08:44.832Z",
+      "group": 21
+    },
+    {
+      "id": "a4d125a7-695d-49f2-8c72-7018aa0f58dd",
+      "word": "indecorous",
+      "definition": "not in good taste; inappropriate or unseemly",
+      "createdAt": "2026-09-04T19:08:14.579Z",
+      "group": 30
+    },
+    {
+      "id": "873f30b3-60bd-42e1-ae7f-f8f39d1eabfe",
+      "word": "everybody has an angle",
+      "definition": "every person has a hidden motive, secret agenda, or self-serving reason for what they do",
+      "createdAt": "2026-09-04T19:05:07.037Z"
+    },
+    {
+      "id": "0dc4fa6a-a6c6-4c0f-b385-24e4e9b7c81a",
+      "word": "diffident",
+      "definition": "reserved or shy; without confidence",
+      "createdAt": "2026-09-04T19:04:01.574Z",
+      "group": 3
+    },
+    {
+      "id": "393b3b06-89ec-4be7-ba2a-6b5f05cb43c3",
+      "word": "rational",
+      "definition": "based on clear thought or reason",
+      "createdAt": "2026-09-04T19:03:13.124Z",
+      "group": 13
+    },
+    {
+      "id": "e7d37ba4-0e27-4b7e-b82a-e7eadc96a688",
+      "word": "disinterested",
+      "definition": "unbiased",
+      "createdAt": "2026-09-04T19:02:03.137Z",
+      "group": 24
+    },
+    {
+      "id": "4bfa6754-de23-475e-b6de-aa8dcd356a3d",
+      "word": "reconcile",
+      "definition": "bring back or return to harmony; restore a relationship",
+      "createdAt": "2026-09-04T18:45:49.607Z",
+      "group": 18
+    },
+    {
+      "id": "7980bc93-6b66-4fdd-bbf1-261990d3396e",
+      "word": "wary",
+      "definition": "exercising caution; careful",
+      "createdAt": "2026-09-03T22:31:33.845Z",
+      "group": 1
+    },
+    {
+      "id": "a9d6dad8-104a-4f0f-9b92-7dd9a7b4bb40",
+      "word": "taciturn",
+      "definition": "of few words; speaking little",
+      "createdAt": "2026-09-03T22:31:24.881Z",
+      "group": 1
+    },
+    {
+      "id": "4aff7574-2f79-46d5-8b0d-48ee350847b4",
+      "word": "spendthrift",
+      "definition": "someone who spends money recklessly",
+      "createdAt": "2026-09-03T22:31:15.960Z",
+      "group": 1
+    },
+    {
+      "id": "c0c1da83-9a79-4c60-89d9-72b2b3438bcf",
+      "word": "quixotic",
+      "definition": "excessively visionary; unfeasible",
+      "createdAt": "2026-09-03T22:31:04.279Z",
+      "group": 1
+    },
+    {
+      "id": "1f06b113-fbcb-41ec-be21-f6fb948a6c9d",
+      "word": "puerile",
+      "definition": "immature and childish",
+      "createdAt": "2026-09-03T22:30:54.891Z",
+      "group": 1
+    },
+    {
+      "id": "0ff8d0ec-309b-4c31-b2cf-827902e6ab6e",
+      "word": "proclivity",
+      "definition": "a fondness or liking for something",
+      "createdAt": "2026-09-03T22:30:45.394Z",
+      "group": 1
+    },
+    {
+      "id": "f9247d77-5cc1-4b26-a7d7-e848eac992c8",
+      "word": "placate",
+      "definition": "decrease someone's anger or other negative emotion",
+      "createdAt": "2026-09-03T22:30:36.577Z",
+      "group": 1
+    },
+    {
+      "id": "8014dbe6-966e-425d-b439-675c41d63b6e",
+      "word": "obsequious",
+      "definition": "excessively submissive to authority",
+      "createdAt": "2026-09-03T22:30:26.962Z",
+      "group": 1
+    },
+    {
+      "id": "aeefd514-fd0a-4cf3-b7f5-acf1c0ea55fe",
+      "word": "misnomer",
+      "definition": "a misleading or inaccurate name",
+      "createdAt": "2026-09-03T22:30:10.364Z",
+      "group": 1
+    },
+    {
+      "id": "8d3100b6-ae9c-43d6-9731-16ec1e3a89d3",
+      "word": "misanthropic",
+      "definition": "having a distaste for humans and society",
+      "createdAt": "2026-09-03T22:29:59.003Z",
+      "group": 1
+    },
+    {
+      "id": "5cab59ec-798a-4fba-8d9d-7e0d96c72a7e",
+      "word": "loquacious",
+      "definition": "likely to talk a lot; wordy",
+      "createdAt": "2026-09-03T22:29:50.037Z",
+      "group": 1
+    },
+    {
+      "id": "908c8494-1787-4936-9ed8-aa790a2c9dd0",
+      "word": "insipid",
+      "definition": "without flavor; lacking energy",
+      "createdAt": "2026-09-03T22:29:40.849Z",
+      "group": 1
+    },
+    {
+      "id": "432f494b-99b7-4558-b545-4d0a5bda1d41",
+      "word": "humdrum",
+      "definition": "boring; unlikely to excite",
+      "createdAt": "2026-09-03T22:29:30.624Z",
+      "group": 1
+    },
+    {
+      "id": "45355773-4660-477f-81c9-57e8884dea66",
+      "word": "homogeneous",
+      "definition": "composed of similar parts; alike",
+      "createdAt": "2026-09-03T22:29:21.868Z",
+      "group": 1
+    },
+    {
+      "id": "c1937bf7-9a06-4a2e-bd40-85718d110cf3",
+      "word": "flout",
+      "definition": "break a rule without guilt",
+      "createdAt": "2026-09-03T22:29:03.141Z",
+      "group": 1
+    },
+    {
+      "id": "ae91f927-4b62-43be-aca8-9e6fdfd13228",
+      "word": "feasible",
+      "definition": "likely to be achieved; practical",
+      "createdAt": "2026-09-03T22:28:52.756Z",
+      "group": 1
+    },
+    {
+      "id": "a9989b8a-f5e7-4e0a-8d38-46324cac06c3",
+      "word": "disseminate",
+      "definition": "distribute or circulate broadly",
+      "createdAt": "2026-09-03T22:28:44.774Z",
+      "group": 1
+    },
+    {
+      "id": "d90e2b30-3eab-4ed4-a3fa-794c92a06acb",
+      "word": "deify",
+      "definition": "look up to someone or something as a god",
+      "createdAt": "2026-09-03T22:27:35.336Z",
+      "group": 1
+    },
+    {
+      "id": "1caffcc9-f0a8-4406-8ab4-2ac6f0004d9d",
+      "word": "daunting",
+      "definition": "scary or frightening; (of a task) seeming impossible",
+      "createdAt": "2026-09-03T22:27:24.643Z",
+      "group": 1
+    },
+    {
+      "id": "8896cdae-9683-48dc-a34d-0947e3f9ee82",
+      "word": "cursory",
+      "definition": "lacking effort; without care",
+      "createdAt": "2026-09-03T22:27:13.081Z",
+      "group": 1
+    },
+    {
+      "id": "0c948777-471c-4cbf-b105-4164392a92a8",
+      "word": "congenial",
+      "definition": "likable and friendly, often due to shared interests, (of a thing) enjoyable because it aligns with one's tendencies",
+      "createdAt": "2026-09-03T22:26:52.939Z",
+      "group": 1
+    },
+    {
+      "id": "5d054f96-5cc6-4555-996b-408dd7a6d863",
+      "word": "cerebral",
+      "definition": "related to the brain,intellectual; focused on learning rather than emotion",
+      "createdAt": "2026-09-03T22:26:24.339Z",
+      "group": 1
+    },
+    {
+      "id": "de45de6c-8764-489f-b508-614173d6fd7a",
+      "word": "capricious",
+      "definition": "having varying moods; fickle",
+      "createdAt": "2026-09-03T22:26:07.118Z",
+      "group": 1
+    },
+    {
+      "id": "1f968ef2-2e1f-4980-88d6-5fbcff251c47",
+      "word": "belie",
+      "definition": "give a false impression of; mask",
+      "createdAt": "2026-09-03T22:25:57.969Z",
+      "group": 1
+    },
+    {
+      "id": "34a57dc5-b2db-4000-af99-5a27f0e0eb3a",
+      "word": "amorphous",
+      "definition": "lacking structure; unclear",
+      "createdAt": "2026-09-03T22:25:15.707Z",
+      "group": 1
+    },
+    {
+      "id": "d6f608b7-3e5e-4081-963b-10b19ed215fb",
+      "word": "abound",
+      "definition": "be present in large quantities",
+      "createdAt": "2026-09-03T22:24:50.958Z",
+      "group": 1
+    },
+    {
       "id": "61cdbdb6-15fd-4daf-8f35-9534d28771af",
       "word": "diffident",
       "definition": "reserved or shy; without confidence",
@@ -16,7 +497,8 @@
       "id": "d3f732c3-404c-4572-ace8-3c0ea3380ef7",
       "word": "spartan",
       "definition": "marked by simplicity, frugality, and avoidance of luxury",
-      "createdAt": "2026-09-03T21:50:10.399Z"
+      "createdAt": "2026-09-03T21:50:10.399Z",
+      "group": 11
     },
     {
       "id": "e419da5f-3db4-440c-920e-127d750e8527",
@@ -28,7 +510,8 @@
       "id": "7334c3bf-cd07-4237-a6f4-e44cebf1b022",
       "word": "economy",
       "definition": "frugal or effective use of resources or words",
-      "createdAt": "2026-09-03T21:49:23.724Z"
+      "createdAt": "2026-09-03T21:49:23.724Z",
+      "group": 22
     },
     {
       "id": "b1770320-40ae-4dd6-b366-6ed12318f61c",
@@ -58,7 +541,8 @@
       "id": "7e0c70d5-a5e6-40df-92cf-33890fa36bca",
       "word": "eccentric",
       "definition": "deviating from conventional behavior; quirky",
-      "createdAt": "2026-09-03T21:03:44.229Z"
+      "createdAt": "2026-09-03T21:03:44.229Z",
+      "group": 11
     },
     {
       "id": "cdd03d0b-0c4c-4521-8603-9e7348747e34",
@@ -129,7 +613,8 @@
       "id": "9950ac59-61d3-4738-97b7-822cb4988c04",
       "word": "covet",
       "definition": "strongly desire",
-      "createdAt": "2026-08-26T22:44:07.142Z"
+      "createdAt": "2026-08-26T22:44:07.142Z",
+      "group": 2
     },
     {
       "id": "43119038-d09e-4337-ab06-5384548cde0f",
@@ -148,7 +633,9 @@
       "id": "978a0db1-ba85-4111-a164-1578e5f0960e",
       "word": "an austerity",
       "definition": "severe simplicity, lack of luxury",
-      "createdAt": "2026-08-26T22:44:07.142Z"
+      "createdAt": "2026-08-26T22:44:07.142Z",
+      "note": "1. (of a person) strict and stern in character\n2. (of living conditions) lacking luxury; extremely harsh",
+      "group": 1
     },
     {
       "id": "5ef4bec6-cb1c-4000-91e9-7575c2a40a63",
@@ -179,7 +666,8 @@
       "id": "2353cf60-4cb1-402e-a76e-68e8b31fc271",
       "word": "didactic",
       "definition": "intended to teach a moral lesson",
-      "createdAt": "2026-08-26T22:44:07.142Z"
+      "createdAt": "2026-08-26T22:44:07.142Z",
+      "group": 1
     },
     {
       "id": "57d9a70e-f73f-471f-b66b-8c3a343d978b",
@@ -266,7 +754,8 @@
       "word": "conspicuous",
       "definition": "easily noticed",
       "createdAt": "2026-08-26T22:44:07.142Z",
-      "note": "This means buying/displaying expensive things specifically to show off wealth or status.\n\nHis collection of luxury cars was an example of conspicuous consumption.\n\nnoticeable, prominent, striking, salient, obvious"
+      "note": "This means buying/displaying expensive things specifically to show off wealth or status.\n\nHis collection of luxury cars was an example of conspicuous consumption.\n\nnoticeable, prominent, striking, salient, obvious",
+      "group": 1
     },
     {
       "id": "3677ed1b-3673-4bff-9746-485047bfde97",
@@ -321,7 +810,8 @@
       "id": "72c7ddb1-6c35-4786-ab21-e25a148f3bb6",
       "word": "brazen",
       "definition": "shamelessly bold",
-      "createdAt": "2026-08-26T22:44:07.142Z"
+      "createdAt": "2026-08-26T22:44:07.142Z",
+      "group": 2
     },
     {
       "id": "cbce0dc9-ac5c-440d-9562-2658ad4d8df5",
