@@ -215,7 +215,7 @@ async function addBulkWords() {
   } catch (error) { state.entries = previous; render(); toast(error.message); }
 }
 
-function resetForm() { state.editingId = null; $('#wordForm').reset(); $('#groupSelect').value = '0'; $('#submitButton').textContent = 'add word'; $('#cancelEdit').classList.add('is-hidden'); }
+function resetForm() { state.editingId = null; $('#wordForm').reset(); $('#groupSelect').value = '0'; $('#noteInput').value = ''; $('#noteInput').classList.remove('is-hidden'); $('#formNoteToggle').textContent = 'hide note'; $('#submitButton').textContent = 'add word'; $('#cancelEdit').classList.add('is-hidden'); }
 
 async function saveNote(entryId) {
   const input = document.querySelector(`[data-note-input="${entryId}"]`); if (!input) return;
@@ -288,6 +288,9 @@ document.addEventListener('click', event => {
     event.preventDefault();
     const entry = state.entries.find(x => x.id === control.dataset.edit); if (!entry) return;
     state.editingId = entry.id; $('#wordInput').value = entry.word; $('#definitionInput').value = entry.definition; $('#groupSelect').value = String(entry.group || 0);
+    $('#noteInput').value = entry.note || '';
+    $('#noteInput').classList.remove('is-hidden');
+    $('#formNoteToggle').textContent = 'hide note';
     $('#submitButton').textContent = 'update'; $('#cancelEdit').classList.remove('is-hidden'); $('#wordInput').focus();
     return;
   }
@@ -310,6 +313,7 @@ document.addEventListener('click', event => {
   if (control.hasAttribute('data-end-round') || control.hasAttribute('data-back-setup')) { event.preventDefault(); clearRound(); renderPractice(); return; }
   if (control.hasAttribute('data-retry')) { event.preventDefault(); startRound(state.round.words.length, state.feedbackMode); return; }
   if (control.id === 'cancelEdit') { event.preventDefault(); resetForm(); return; }
+  if (control.id === 'formNoteToggle') { event.preventDefault(); const box = $('#noteInput'); box.classList.toggle('is-hidden'); const open = !box.classList.contains('is-hidden'); control.textContent = open ? 'hide note' : '+ note'; if (open) box.focus(); return; }
   if (control.id === 'bulkToggle') { event.preventDefault(); const panel = $('#bulkPanel'); panel.classList.toggle('is-hidden'); if (!panel.classList.contains('is-hidden')) $('#bulkInput').focus(); return; }
   if (control.id === 'bulkCancel') { event.preventDefault(); $('#bulkPanel').classList.add('is-hidden'); return; }
   if (control.id === 'bulkAdd') { addBulkWords(); return; }
@@ -334,12 +338,13 @@ $('#wordForm').addEventListener('submit', async event => {
   event.preventDefault();
   const word = $('#wordInput').value.trim(); const definition = $('#definitionInput').value.trim();
   const group = Number($('#groupSelect').value) || 0;
+  const note = $('#noteInput').value.trim();
   if (!word || !definition) return;
   const previous = state.entries;
   if (state.editingId) {
-    state.entries = state.entries.map(e => e.id === state.editingId ? { ...e, word, definition, group } : e);
+    state.entries = state.entries.map(e => e.id === state.editingId ? { ...e, word, definition, group, note } : e);
   } else {
-    state.entries = [{ id: id(), word, definition, group, createdAt: new Date().toISOString() }, ...state.entries];
+    state.entries = [{ id: id(), word, definition, group, note, createdAt: new Date().toISOString() }, ...state.entries];
   }
   resetForm(); clearRound(); render();
   try { await saveEntries(); } catch (error) { state.entries = previous; render(); toast(error.message); }

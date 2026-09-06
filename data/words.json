@@ -1,10 +1,238 @@
 {
   "entries": [
     {
+      "id": "5c144757-191b-46d0-975c-e57fbfb90356",
+      "word": "dogmatic",
+      "definition": "insisting on one's ideas without being open to others'",
+      "createdAt": "2026-09-06T19:15:37.552Z",
+      "note": "dog is loyal to owner, dogmatic person is loyal to ideas",
+      "group": 17
+    },
+    {
+      "id": "30c944a7-ebd9-4b6b-b3c2-f308d6f70a2b",
+      "word": "heterodox",
+      "definition": "deviating from what is acceptable or commonly believed",
+      "createdAt": "2026-09-06T19:14:48.123Z",
+      "note": "hetro means different and dox means opinion so different from opinion\n\nunorthodox",
+      "group": 22
+    },
+    {
+      "id": "1ccafc1d-4781-4e3c-a14d-4192d4f64026",
+      "word": "doctrinaire",
+      "definition": "rigidly sticking to theoretical ideas, rather than being practical",
+      "createdAt": "2026-09-06T19:13:19.427Z",
+      "note": "doctor sticking to theory books",
+      "group": 26
+    },
+    {
+      "id": "5a10bf63-692d-449b-8db9-4d780aaeb915",
+      "word": "iconoclastic",
+      "definition": "challenging or overthrowing tradition or established beliefs",
+      "createdAt": "2026-09-06T19:12:36.314Z",
+      "note": "icon + clash, someone going against traditional beliefs",
+      "group": 16
+    },
+    {
+      "id": "0173228d-53f1-478b-b662-943d85371f89",
+      "word": "acute",
+      "definition": "severe / serious",
+      "createdAt": "2026-09-06T19:08:02.218Z",
+      "note": "acute illness"
+    },
+    {
+      "id": "7dd9a29c-bc87-40d7-ac4d-c9e6fdb93d40",
+      "word": "meager",
+      "definition": "scanty / insufficient",
+      "createdAt": "2026-09-06T19:07:49.494Z",
+      "note": "A meager salary or a meager income means you earn very little money."
+    },
+    {
+      "id": "5451722d-cc0c-4ca4-87f3-cceb9c964814",
+      "word": "impunity",
+      "definition": "if a person does something bad with impunity, they do not get punished for what they have done",
+      "createdAt": "2026-09-06T15:10:37.458Z"
+    },
+    {
+      "id": "8e8da40a-1551-4b34-a760-41023e2e7bd6",
+      "word": "repugnant",
+      "definition": "offensive or repulsive; arousing disgust or aversion",
+      "createdAt": "2026-09-06T13:55:56.757Z",
+      "note": "sounds like pungent which we don't like (sulphur)",
+      "group": 27
+    },
+    {
+      "id": "cfc0fcba-c59f-4eb6-8061-529058d795bb",
+      "word": "acolyte",
+      "definition": "a person who assists or follows another person or cause",
+      "createdAt": "2026-09-06T09:14:35.757Z",
+      "note": "app ko light rakhne wala",
+      "group": 19
+    },
+    {
+      "id": "406d1e38-9dc0-425a-a916-22b4d435ba69",
+      "word": "contend",
+      "definition": "1. argue a certain point of view; assert 2. compete 3. struggle or attempt to overcome something",
+      "createdAt": "2026-09-06T09:03:20.159Z",
+      "note": "contend sounds like contest so you're contesting"
+    },
+    {
+      "id": "62bf9a2f-3dd1-4ef7-93ef-b82cdc4306c5",
+      "word": "compelling",
+      "definition": "1. persuasive and clear 2. attracting interest; fascinating",
+      "createdAt": "2026-09-05T18:34:43.322Z",
+      "note": "compelling argument",
+      "group": 3
+    },
+    {
+      "id": "8d40a98c-2f2c-4d7f-984c-ad4564922907",
+      "word": "cogent",
+      "definition": "persuasive and clear; compelling",
+      "createdAt": "2026-09-05T18:34:20.598Z",
+      "note": "co + agent trying to convenience you to share secrets",
+      "group": 3
+    },
+    {
+      "id": "31119bb4-a028-40bb-87ae-8df0f635b54e",
+      "word": "coalesce",
+      "definition": "bring elements together; unite",
+      "createdAt": "2026-09-05T18:31:26.546Z",
+      "note": "coal - combination of wood and charcoal",
+      "group": 3
+    },
+    {
+      "id": "2fabd3c6-8257-4314-84c7-babb3e3eb812",
+      "word": "chicanery",
+      "definition": "using deception to attain a certain goal",
+      "createdAt": "2026-09-05T18:30:31.926Z",
+      "note": "sounds like shikari who uses deception to hunt animals",
+      "group": 3
+    },
+    {
+      "id": "7e0426a4-6504-4735-b82a-2140574cc698",
+      "word": "censure",
+      "definition": "strongly criticize or disapprove",
+      "createdAt": "2026-09-05T18:28:45.746Z",
+      "note": "censor board which criticise every part of the movie and disapproves of everything",
+      "group": 3
+    },
+    {
+      "id": "12ca7bd7-331a-464b-9731-7b2d0543901c",
+      "word": "canonize",
+      "definition": "treat like a god; deeply venerate",
+      "createdAt": "2026-09-05T18:27:43.948Z",
+      "note": "whoever has a canon is a god in field think of border movie sunny deol",
+      "group": 3
+    },
+    {
+      "id": "619e44f8-e487-43ed-aaef-c72aa8508b32",
+      "word": "cacophonous",
+      "definition": "extremely noisy; grating",
+      "createdAt": "2026-09-05T18:26:42.929Z",
+      "note": "cactus + phone which means cactus on phone which makes shit sound",
+      "group": 3
+    },
+    {
+      "id": "d34077e0-fc25-4358-8057-65673a18f8e4",
+      "word": "burgeon",
+      "definition": "quickly increase or grow; skyrocket",
+      "createdAt": "2026-09-05T18:26:01.475Z",
+      "note": "burg + on which sounds like bulge which means to grow",
+      "group": 3
+    },
+    {
+      "id": "b856e164-0274-49a7-9ba3-4370a5e090af",
+      "word": "bucolic",
+      "definition": "associated with tranquil rural life",
+      "createdAt": "2026-09-05T18:24:58.295Z",
+      "note": "sounds a bit like bullock which means country side",
+      "group": 3
+    },
+    {
+      "id": "a136bae9-21a0-4724-98c7-67a0c840884d",
+      "word": "betray",
+      "definition": "unknowingly disclose or reveal",
+      "createdAt": "2026-09-05T18:24:18.171Z",
+      "note": "sibi betrayed me by revealing vishak my secret",
+      "group": 3
+    },
+    {
+      "id": "484ea1bf-02b7-430b-b198-57236f24abf1",
+      "word": "assuage",
+      "definition": "1. decrease a negative feeling 2. fulfill a certain desire",
+      "createdAt": "2026-09-05T18:23:33.513Z",
+      "note": "ass usage in toilet gives huge reliefs",
+      "group": 3
+    },
+    {
+      "id": "06e23e05-915b-4306-b3b0-e28828cc9807",
+      "word": "ascetic",
+      "definition": "1. (of a lifestyle) very strict and lacking luxury 2. someone who adopts an ascetic lifestyle",
+      "createdAt": "2026-09-05T18:22:33.396Z",
+      "note": "hermit crab",
+      "group": 3
+    },
+    {
+      "id": "19330bcc-fb5d-436c-b7b0-586e67dadfcb",
+      "word": "artless",
+      "definition": "1. naive; inexperienced 2. plain and simple 3. lacking skill",
+      "createdAt": "2026-09-05T18:21:45.401Z",
+      "note": "no art",
+      "group": 3
+    },
+    {
+      "id": "04d948d7-a676-4e8a-9ebe-a60f925604c9",
+      "word": "arduous",
+      "definition": "very challenging; needing great effort",
+      "createdAt": "2026-09-05T18:21:15.922Z",
+      "note": "read it as 'hard to read for us'",
+      "group": 3
+    },
+    {
+      "id": "893a651c-3e28-4ff9-aeb8-78705e156a94",
+      "word": "arcane",
+      "definition": "comprehended by very few people; secret",
+      "createdAt": "2026-09-05T18:19:13.193Z",
+      "note": "sounds like crane and crane is used by very less people",
+      "group": 3
+    },
+    {
+      "id": "ac5dd3d4-cb67-43d4-9a4e-bf8b6eefb829",
+      "word": "antipathy",
+      "definition": "profound hostility or hatred",
+      "createdAt": "2026-09-05T18:18:20.347Z",
+      "note": "opp of sympathy",
+      "group": 3
+    },
+    {
+      "id": "fe760af3-6c3d-446b-ad25-e9eb7eb0bb12",
+      "word": "anomalous",
+      "definition": "differing from what is normal",
+      "createdAt": "2026-09-05T18:17:46.617Z",
+      "note": "like anomaly",
+      "group": 3
+    },
+    {
+      "id": "eec87125-e40d-499c-9266-c5934ea974b4",
+      "word": "abjure",
+      "definition": "strongly reject (an idea); forgo",
+      "createdAt": "2026-09-05T18:17:12.939Z",
+      "note": "ab injure and when u r injured you give up",
+      "group": 3
+    },
+    {
+      "id": "46d734d1-1f7a-47d0-950b-bd692d06419c",
+      "word": "abate",
+      "definition": "decrease in intensity; lessen",
+      "createdAt": "2026-09-05T18:14:46.468Z",
+      "note": "sounds like rebate and rebate means lessen",
+      "group": 3
+    },
+    {
       "id": "6711e4fc-a777-42b0-bcd8-8f7e8e25034a",
       "word": "ingenuous",
       "definition": "naive and lacking experience",
       "createdAt": "2026-09-04T22:23:47.620Z",
+      "note": "in+genuine => in genuine relationship people are naive and trusting",
       "group": 2
     },
     {
@@ -12,6 +240,7 @@
       "word": "incredulous",
       "definition": "doubtful and disbelieving",
       "createdAt": "2026-09-04T22:23:38.525Z",
+      "note": "in + cred, we doubt and not believe cred's valuation is 6B",
       "group": 2
     },
     {
@@ -19,6 +248,7 @@
       "word": "diatribe",
       "definition": "an angry rant; verbal abuse",
       "createdAt": "2026-09-04T22:23:27.995Z",
+      "note": "two tribes fighting",
       "group": 2
     },
     {
@@ -26,6 +256,7 @@
       "word": "desiccate",
       "definition": "dry out; remove all moisture",
       "createdAt": "2026-09-04T22:23:16.860Z",
+      "note": "desi cake is always dried up",
       "group": 2
     },
     {
@@ -40,6 +271,7 @@
       "word": "demur",
       "definition": "1. hesitate or object; express doubt 2. hesitation",
       "createdAt": "2026-09-04T22:22:56.190Z",
+      "note": "Dem - u - r wrong",
       "group": 2
     },
     {
@@ -47,6 +279,7 @@
       "word": "deft",
       "definition": "highly proficient; skilled",
       "createdAt": "2026-09-04T22:22:46.879Z",
+      "note": "TU DELFT makes skilled engineers",
       "group": 2
     },
     {
@@ -54,6 +287,7 @@
       "word": "decorum",
       "definition": "politeness and proper behavior",
       "createdAt": "2026-09-04T22:22:37.728Z",
+      "note": "To maintain decorum means to keep proper, polite, and orderly behavior",
       "group": 2
     },
     {
@@ -61,6 +295,7 @@
       "word": "craven",
       "definition": "lacking bravery; weak-kneed",
       "createdAt": "2026-09-04T22:22:21.374Z",
+      "note": "sounds like raven - ravan disguised as a sadhu and took Sita mata",
       "group": 2
     },
     {
@@ -68,6 +303,7 @@
       "word": "convoluted",
       "definition": "difficult to understand or follow.",
       "createdAt": "2026-09-04T22:21:48.727Z",
+      "note": "convolution theorem is hard to understand",
       "group": 2
     },
     {
@@ -75,6 +311,7 @@
       "word": "contrite",
       "definition": "feeling regretful or guilty",
       "createdAt": "2026-09-04T22:21:38.024Z",
+      "note": "count the cash right or else u will regret it",
       "group": 2
     },
     {
@@ -82,6 +319,7 @@
       "word": "construe",
       "definition": "understand something subjectively",
       "createdAt": "2026-09-04T22:21:28.782Z",
+      "note": "if i construe your message correctly",
       "group": 2
     },
     {
@@ -89,6 +327,7 @@
       "word": "caustic",
       "definition": "1. (of speech) hostile and bitter 2. (of a chemical) corrosive; acidic",
       "createdAt": "2026-09-04T22:21:16.794Z",
+      "note": "caustic soda which is strong base which is bitter and hostile",
       "group": 2
     },
     {
@@ -96,6 +335,7 @@
       "word": "castigate",
       "definition": "scold someone harshly",
       "createdAt": "2026-09-04T22:21:07.344Z",
+      "note": "sounds like rasti-gate",
       "group": 2
     },
     {
@@ -103,6 +343,7 @@
       "word": "candid",
       "definition": "honest; without deception",
       "createdAt": "2026-09-04T22:20:57.553Z",
+      "note": "children like candy, children are honest",
       "group": 2
     },
     {
@@ -110,6 +351,7 @@
       "word": "calumny",
       "definition": "slander and defamation",
       "createdAt": "2026-09-04T22:20:48.432Z",
+      "note": "sounds like alumni and shitting on some alumni like shubham das",
       "group": 2
     },
     {
@@ -117,6 +359,7 @@
       "word": "benign",
       "definition": "1. harmless; having little effect 2. (of a person's character) kind hearted; nice",
       "createdAt": "2026-09-04T22:20:11.864Z",
+      "note": "opposite of malign",
       "group": 2
     },
     {
@@ -124,6 +367,7 @@
       "word": "banal",
       "definition": "unoriginal and dull; lacking creativity",
       "createdAt": "2026-09-04T22:20:00.727Z",
+      "note": "ban all those directors whose movies are banal",
       "group": 2
     },
     {
@@ -131,6 +375,7 @@
       "word": "avaricious",
       "definition": "greedy; always wanting more",
       "createdAt": "2026-09-04T22:19:49.794Z",
+      "note": "a + var(war) in war everyone becomes greedy",
       "group": 2
     },
     {
@@ -152,6 +397,7 @@
       "word": "amenable",
       "definition": "(of a person) receptive to change; open (of a thing) responsive to",
       "createdAt": "2026-09-04T22:19:13.086Z",
+      "note": "amen is said by person after prayers and he fucked up and when he wants to change",
       "group": 2
     },
     {
@@ -159,6 +405,7 @@
       "word": "ameliorate",
       "definition": "improve a bad feeling or bad situation",
       "createdAt": "2026-09-04T22:19:00.561Z",
+      "note": "ameli (imli) improves taste",
       "group": 2
     },
     {
@@ -166,6 +413,7 @@
       "word": "ambivalent",
       "definition": "having conflicting emotions; unsure",
       "createdAt": "2026-09-04T22:18:45.977Z",
+      "note": "ambi means both, ambivert, ambi + valent (emotion)",
       "group": 2
     },
     {
@@ -173,6 +421,7 @@
       "word": "alacrity",
       "definition": "eagerness to do something",
       "createdAt": "2026-09-04T22:18:34.714Z",
+      "note": "at last in city, who is excited and eager to try things",
       "group": 2
     },
     {
@@ -180,6 +429,7 @@
       "word": "aggrandize",
       "definition": "enhance one's power or standing",
       "createdAt": "2026-09-04T22:18:24.034Z",
+      "note": "aggregate + grand",
       "group": 2
     },
     {
@@ -647,7 +897,8 @@
       "id": "c60a401c-8d01-491c-892c-32a7c0533f2c",
       "word": "frivolousness",
       "definition": "lack of seriousness",
-      "createdAt": "2026-08-26T22:44:07.142Z"
+      "createdAt": "2026-08-26T22:44:07.142Z",
+      "group": 5
     },
     {
       "id": "355433b7-68b0-4fd1-b6f2-ecbb50167c26",
@@ -811,6 +1062,7 @@
       "word": "brazen",
       "definition": "shamelessly bold",
       "createdAt": "2026-08-26T22:44:07.142Z",
+      "note": "Bra of zen company",
       "group": 2
     },
     {

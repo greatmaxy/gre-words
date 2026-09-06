@@ -24,8 +24,10 @@
         <input id="definitionInput" placeholder="definition" maxlength="300" autocomplete="off" />
         <select id="groupSelect"><option value="0">no group</option></select>
         <button type="submit" id="submitButton">add word</button>
+        <a href="#note" id="formNoteToggle" class="cancel-link">hide note</a>
         <a href="#cancel" id="cancelEdit" class="cancel-link is-hidden">cancel</a>
         <a href="#bulk" id="bulkToggle" class="cancel-link">add many</a>
+        <textarea id="noteInput" class="form-note" rows="4" maxlength="2000" placeholder="side note — etymology, mnemonics, example sentences… (optional)"></textarea>
       </form>
       <div id="bulkPanel" class="bulk-panel is-hidden">
         <textarea id="bulkInput" rows="8" placeholder="one word per line, e.g.&#10;laconic - using very few words&#10;garrulous: excessively talkative&#10;or paste two columns straight from excel"></textarea>

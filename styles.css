@@ -25,6 +25,8 @@ input:focus, textarea:focus { outline: 1px solid #ff6600; }
 #definitionInput { width: 330px; }
 .word-form button { font-size: 10pt; padding: 2px 10px; border: 1px solid #b0b0a8; background: #eeeee6; cursor: pointer; }
 .cancel-link { color: #828282; font-size: 8pt; padding-top: 5px; }
+.form-note { flex-basis: 100%; font-size: 9pt; padding: 3px 5px; border: 1px solid #b0b0a8; background: #ffffff; width: min(640px, 100%); resize: vertical; line-height: 1.45; }
+.form-note.is-hidden { display: none; }
 
 .bulk-panel { display: flex; flex-direction: column; gap: 4px; padding-bottom: 12px; }
 .bulk-panel textarea { font-size: 9pt; padding: 3px 5px; border: 1px solid #b0b0a8; background: #ffffff; width: min(640px, 100%); resize: vertical; line-height: 1.45; }
