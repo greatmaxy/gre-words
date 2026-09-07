@@ -215,7 +215,7 @@ async function addBulkWords() {
   } catch (error) { state.entries = previous; render(); toast(error.message); }
 }
 
-function resetForm() { state.editingId = null; $('#wordForm').reset(); $('#groupSelect').value = '0'; $('#noteInput').value = ''; $('#noteInput').classList.remove('is-hidden'); $('#formNoteToggle').textContent = 'hide note'; $('#submitButton').textContent = 'add word'; $('#cancelEdit').classList.add('is-hidden'); }
+function resetForm() { state.editingId = null; $('#wordForm').reset(); $('#groupSelect').value = '0'; $('#noteInput').value = ''; $('#noteInput').classList.remove('is-hidden'); $('#formNoteToggle').textContent = 'hide note'; $('#submitButton').textContent = 'add word'; $('#cancelEdit').classList.add('is-hidden'); $('#formError').textContent = ''; }
 
 async function saveNote(entryId) {
   const input = document.querySelector(`[data-note-input="${entryId}"]`); if (!input) return;
@@ -340,6 +340,9 @@ $('#wordForm').addEventListener('submit', async event => {
   const group = Number($('#groupSelect').value) || 0;
   const note = $('#noteInput').value.trim();
   if (!word || !definition) return;
+  const duplicate = state.entries.find(e => e.word.toLowerCase() === word.toLowerCase() && e.id !== state.editingId);
+  if (duplicate) { $('#formError').textContent = `“${duplicate.word}” is already in your list — ${duplicate.definition}`; return; }
+  $('#formError').textContent = '';
   const previous = state.entries;
   if (state.editingId) {
     state.entries = state.entries.map(e => e.id === state.editingId ? { ...e, word, definition, group, note } : e);
@@ -350,6 +353,7 @@ $('#wordForm').addEventListener('submit', async event => {
   try { await saveEntries(); } catch (error) { state.entries = previous; render(); toast(error.message); }
 });
 $('#searchInput').addEventListener('input', event => { state.query = event.target.value; renderList(); });
+$('#wordInput').addEventListener('input', () => { $('#formError').textContent = ''; });
 $('#dateFilter').addEventListener('change', event => { state.dateFilter = event.target.value; renderList(); });
 $('#groupFilter').addEventListener('change', event => { state.groupFilter = event.target.value; renderList(); });
 document.addEventListener('change', event => {

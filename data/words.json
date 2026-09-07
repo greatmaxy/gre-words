@@ -1,6 +1,115 @@
 {
   "entries": [
     {
+      "id": "1045327d-2181-4c2d-b178-7d4b09d26c13",
+      "word": "cosmopolitan",
+      "definition": "1. (of a city) highly diverse 2. (of a person) sophisticated and urbane",
+      "createdAt": "2026-09-07T19:51:10.484Z",
+      "group": 3
+    },
+    {
+      "id": "bb915f3b-58a5-43a6-889e-5ca2ef321191",
+      "word": "copious",
+      "definition": "existing in great supply, abundant",
+      "createdAt": "2026-09-07T19:50:58.014Z",
+      "group": 3
+    },
+    {
+      "id": "82a851e5-c187-46a7-bb4f-27baa4e46175",
+      "word": "Chastise",
+      "definition": "criticize harshly",
+      "createdAt": "2026-09-06T20:39:19.330Z",
+      "note": "Chastise is a verb:\n\nto criticize, scold, or reprimand someone\n\nExample:\n\nThe coach chastised the players for being careless.\n\nChastening is usually an adjective:\n\nmaking someone less confident, less proud, or more aware of their limitations\n\nExample:\n\nLosing badly was a chastening experience.",
+      "group": 22
+    },
+    {
+      "id": "814aa45e-72b0-4f68-ba7e-d6a43d135729",
+      "word": "prosaic",
+      "definition": "straightforward; unoriginal; unimaginative",
+      "createdAt": "2026-09-06T20:37:10.877Z",
+      "note": "mosaic is beautiful artistic art with vibrant colors, prosaic is opposite",
+      "group": 5
+    },
+    {
+      "id": "c486d2f8-303c-4785-b408-d3e8f3f1f920",
+      "word": "oblivious",
+      "definition": "not aware of or not noticing something",
+      "createdAt": "2026-09-06T20:32:25.007Z",
+      "group": 24
+    },
+    {
+      "id": "8c2590eb-c49d-4bb0-a921-753a481452df",
+      "word": "punctilious",
+      "definition": "highly concerned with details or manners",
+      "createdAt": "2026-09-06T20:32:02.332Z",
+      "note": "people who are punctual are very exact with the timins",
+      "group": 4
+    },
+    {
+      "id": "e5bfb03b-052f-430b-bf50-d2c832cdd1f8",
+      "word": "mendacity",
+      "definition": "dishonesty",
+      "createdAt": "2026-09-06T20:31:18.656Z",
+      "note": "mend + a + city politicians claim they will mend but they are dishonest",
+      "group": 19
+    },
+    {
+      "id": "6bb1c99d-a56b-4b5e-9b4f-839b02eb5ee9",
+      "word": "animate",
+      "definition": "to make something have more life and energy",
+      "createdAt": "2026-09-06T19:49:55.447Z"
+    },
+    {
+      "id": "2878e73c-6b77-43d3-938b-e9f1809b5342",
+      "word": "discernible",
+      "definition": "able to be recognized or understood",
+      "createdAt": "2026-09-06T19:48:22.464Z",
+      "note": "indiscernible = impossible or very difficult to perceive/not notice",
+      "group": 5
+    },
+    {
+      "id": "29a6e2f0-ebfa-4fbb-bb57-4ea12ed47687",
+      "word": "imperceptible",
+      "definition": "too slight to be noticed",
+      "createdAt": "2026-09-06T19:47:37.452Z"
+    },
+    {
+      "id": "85f35e4b-62d8-4f17-b364-061dcc0d2bd0",
+      "word": "indisputable",
+      "definition": "impossible to deny",
+      "createdAt": "2026-09-06T19:47:17.372Z"
+    },
+    {
+      "id": "694a0dc6-8d56-469f-837f-71719087f723",
+      "word": "utilitarian",
+      "definition": "emphasizing practicality and functionality over aesthetics",
+      "createdAt": "2026-09-06T19:39:52.485Z",
+      "note": "some utilities are very important",
+      "group": 8
+    },
+    {
+      "id": "13ae4a5a-4ec4-48a0-a4ec-86dd21c7da90",
+      "word": "indispensable",
+      "definition": "completely necessary; essential",
+      "createdAt": "2026-09-06T19:39:20.733Z",
+      "note": "in + dispensable(disposable) you cannot get rid of",
+      "group": 10
+    },
+    {
+      "id": "7fa8357d-dbce-4542-aa5e-1ad6af40a257",
+      "word": "affect",
+      "definition": "to deliberately adopt or pretend to have a particular manner/style",
+      "createdAt": "2026-09-06T19:28:17.031Z",
+      "note": "Besides “to influence,” affect can mean:\n\nto deliberately adopt or pretend to have a particular manner/style"
+    },
+    {
+      "id": "3b390e24-3921-47e1-936b-59f36cddf33e",
+      "word": "tedious",
+      "definition": "boring and slow, without variety",
+      "createdAt": "2026-09-06T19:27:05.388Z",
+      "group": 25
+    },
+    {
       "id": "5c144757-191b-46d0-975c-e57fbfb90356",
       "word": "dogmatic",
       "definition": "insisting on one's ideas without being open to others'",
@@ -73,7 +182,8 @@
       "word": "contend",
       "definition": "1. argue a certain point of view; assert 2. compete 3. struggle or attempt to overcome something",
       "createdAt": "2026-09-06T09:03:20.159Z",
-      "note": "contend sounds like contest so you're contesting"
+      "note": "contend sounds like contest so you're contesting",
+      "group": 3
     },
     {
       "id": "62bf9a2f-3dd1-4ef7-93ef-b82cdc4306c5",
@@ -390,6 +500,7 @@
       "word": "anachronistic",
       "definition": "of the wrong time or era",
       "createdAt": "2026-09-04T22:19:27.940Z",
+      "note": "an + chronistic(era)",
       "group": 2
     },
     {
